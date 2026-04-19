@@ -146,17 +146,19 @@ export TEST_MODEL="gpt-4.1"
 export MAX_SAMPLES=1
 ```
 
-### Step A. Prompt Generation
+### Step A. Prepare Prediction File (`pred.jsonl`)
 
 ```bash
-rm -rf ./prompts/MedProbeBench/
-python generate_prompts.py \
-  -i ./datasets/MedProbeBench.jsonl \
-  -o ./prompts/MedProbeBench/v1/ \
-  --max-samples "$MAX_SAMPLES"
+# Option 1 (recommended in this checkout): use existing prediction file
+export PRED_PATH="./datasets/MedProbeBench/$TEST_MODEL/pred.jsonl"
+
+# Option 2: if you maintain your own generation scripts, produce `pred.jsonl`
+# and set PRED_PATH to that file.
 ```
 
-### Step B. Report Generation
+If you already have `PRED_PATH`, you can skip Step B and Step C.
+
+### Step B. (Optional) Report Generation
 
 ```bash
 python openai_generator.py \
@@ -167,7 +169,7 @@ python openai_generator.py \
   --model "$TEST_MODEL"
 ```
 
-### Step C. Data Processing Pipeline
+### Step C. (Optional) Data Processing Pipeline
 
 ```bash
 python run_pipeline.py \
@@ -198,7 +200,7 @@ Common `run_pipeline.py` flags:
 
 ```bash
 bash run_medprobebench.sh \
-  --data_path "./datasets/MedProbeBench/$TEST_MODEL/pred.jsonl" \
+  --data_path "$PRED_PATH" \
   --results_dir "./results/MedProbeBench/$TEST_MODEL" \
   --gt_path "./datasets/MedProbeBench.jsonl" \
   --max_samples "$MAX_SAMPLES" \
@@ -210,7 +212,7 @@ bash run_medprobebench.sh \
 Step D follows a **two-stage evaluation** setup:
 
 - **Stage 1 (Fine-grained Evidence Verification)**: `task_success_rate` + `search_effectiveness` + `factual_consistency`
-- **Stage 2 (Holistic Quality, optional)**: `global_eval` via `--enable_global_eval`
+- **Stage 2 (Holistic Quality, optional)**: `global_eval` (enabled by default in `run_medprobebench.sh`, configurable via `ENABLE_GLOBAL_EVAL`)
 
 ---
 
@@ -229,15 +231,9 @@ Two-stage metric composition:
 ```text
 examples/evaluation/medprobebench/
 ├── __init__.py
-├── baichuan_generator.py
-├── claude_generator.py
-├── deep_research_generator.py
 ├── eval.py
 ├── eval.sh
 ├── eval_utils.py
-├── gemini_generator.py
-├── generate_prompts.py
-├── get_details.py
 ├── openai_generator.py
 ├── requirements.txt
 ├── run.sh
