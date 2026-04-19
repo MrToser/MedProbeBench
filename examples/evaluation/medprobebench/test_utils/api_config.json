@@ -1,0 +1,4 @@
+{
+    "base_url": "${GUIDEBENCH_API_BASE_URL}",
+    "api_key": "${GUIDEBENCH_API_KEY}"
+} 
