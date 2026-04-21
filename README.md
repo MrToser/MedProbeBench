@@ -236,6 +236,12 @@ Two-stage metric composition:
 - **Stage 2 / Holistic (optional)**: `global_eval` for report-level quality assessment
 - Final score is computed as a weighted combination of enabled metrics in `metric/guidebench.py`
 
+### Leaderboard (Evaluation Results)
+
+The figure below shows a leaderboard-style summary of model performance under the MedProbe-Eval setup.
+
+![MedProbeBench Leaderboard](assets/lollipop_chart.png)
+
 ---
 
 ## 6. Directory Structure (Core)
