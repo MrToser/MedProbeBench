@@ -1,4 +1,12 @@
+![MedProbeBench Framework](assets/medprobebench-framework.png)
+
 # MedProbeBench Evaluation Pipeline
+
+[![arXiv](https://img.shields.io/badge/arXiv-2604.18418-b31b1b.svg)](https://arxiv.org/pdf/2604.18418)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/HanToser/MedprobeBench)
+[![Project Page](https://img.shields.io/badge/Project-Page-2ea44f.svg)](https://github.com/uni-medical/MedProbeBench)
 
 A complete evaluation pipeline for medical guideline generation: from model outputs to structured extraction and MedProbe-Eval based multi-dimensional scoring.
 
@@ -290,3 +298,18 @@ examples/evaluation/medprobebench/
 This project is licensed under the **Apache License 2.0**.
 
 See the full license text in `[LICENSE](./LICENSE)`.
+
+---
+
+## 9. Citation
+
+If you use this dataset or evaluation pipeline in your work, please cite:
+
+```bibtex
+@article{liu2026medprobebench,
+  title={MedProbeBench: Systematic Benchmarking at Deep Evidence Integration for Expert-level Medical Guideline},
+  author={Liu, Jiyao and Shen, Jianghan and Song, Sida and Li, Tianbin and Liu, Xiaojia and Li, Rongbin and Huang, Ziyan and Lin, Jiashi and Ning, Junzhi and Ji, Changkai and Luo, Siqi and Li, Wenjie and Ma, Chenglong and Hu, Ming and Xiong, Jing and Ye, Jin and Fu, Bin and Xu, Ningsheng and Chen, Yirong and Jin, Lei and Chen, Hong and He, Junjun},
+  journal={arXiv preprint arXiv:2604.18418},
+  year={2026}
+}
+```
