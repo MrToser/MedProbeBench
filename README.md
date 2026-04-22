@@ -5,6 +5,10 @@
 
 ![MedProbeBench Framework](assets/pipline_00.png)
 
+Dataset location: 
+
+**<mark>./examples/evaluation/medprobebench/datasets/MedProbeBench.jsonl</mark> or**  **<mark>./MedProbeBench.jsonl</mark>**
+
 A complete evaluation pipeline for medical guideline generation: from model outputs to structured extraction and MedProbe-Eval based multi-dimensional scoring.
 
 > This document focuses on the workflow under `examples/evaluation/medprobebench`.
@@ -20,8 +24,6 @@ Following the MedProbeBench paper, this benchmark uses high-quality clinical gui
 - optional holistic report-level scoring with task-adaptive rubrics.
 
 In short, this benchmark targets the full lifecycle of **medical deep research -> structured claims/citations -> reproducible evaluation**, with a two-stage MedProbe-Eval view (holistic quality + fine-grained evidence verification).
-
-Dataset location: ./examples/evaluation/medprobebench/datasets/MedProbeBench.jsonl or ./MedProbeBench.jsonl
 
 ---
 
