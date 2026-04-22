@@ -21,7 +21,7 @@ Following the MedProbeBench paper, this benchmark uses high-quality clinical gui
 
 In short, this benchmark targets the full lifecycle of **medical deep research -> structured claims/citations -> reproducible evaluation**, with a two-stage MedProbe-Eval view (holistic quality + fine-grained evidence verification).
 
-Dataset location: ./examples/evaluation/medprobebench/datasets/MedProbeBench.jsonl
+Dataset location: ./examples/evaluation/medprobebench/datasets/MedProbeBench.jsonl or ./MedProbeBench.jsonl
 
 ---
 
