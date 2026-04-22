@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
-[![Project Page](https://img.shields.io/badge/Project-Page-2ea44f.svg)](https://github.com/uni-medical/MedProbeBench)
 
 ![MedProbeBench Framework](assets/pipline_00.png)
 
